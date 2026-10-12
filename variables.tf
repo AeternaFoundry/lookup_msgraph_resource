@@ -9,8 +9,6 @@ Optional:
     - query_parameters
     - response_export_values
     - retry
-    - timeouts (block):
-        - read (optional)
 EOT
 
   type = map(object({
@@ -21,9 +19,6 @@ EOT
     response_export_values = optional(map(string))
     retry = optional(object({
       error_message_regex = list(string)
-    }))
-    timeouts = optional(object({
-      read = optional(string)
     }))
   }))
 }
